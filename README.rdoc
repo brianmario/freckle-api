@@ -1,0 +1,7 @@
+= Freckle API - ruby client
+
+A basic API client for the Freckle API
+
+== Dependencies
+
+* curb
