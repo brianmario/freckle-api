@@ -4,4 +4,5 @@ A basic API client for the Freckle API
 
 == Dependencies
 
-* curb
+* curb - http://github.com/taf2/curb
+* json - http://github.com/genki/json
