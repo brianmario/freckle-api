@@ -1,13 +1,8 @@
-require 'zlib' unless defined?(Zlib)
-require 'curb' unless defined?(Curl)
-require 'json' unless defined?(JSON)
+require 'yajl' unless defined?(Yajl)
+require 'uri' unless defined?(URI)
 
 module Apis
   module Freckle
-    autoload :Base,                   'apis/freckle/base'
-    autoload :Project,                'apis/freckle/project'
-    autoload :Entry,                  'apis/freckle/entry'
-    
     module ApiObject
       def initialize(hash)
         @hash = hash
@@ -19,3 +14,8 @@ module Apis
     end
   end
 end
+
+base = File.expand_path(File.dirname(__FILE__))
+require base + '/freckle/base'
+require base + '/freckle/project'
+require base + '/freckle/entry'

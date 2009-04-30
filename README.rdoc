@@ -4,5 +4,4 @@ A basic API client for the Freckle API
 
 == Dependencies
 
-* curb - http://github.com/taf2/curb
-* json - http://github.com/genki/json
+* yajl-ruby - http://github.com/brianmario/yajl-ruby
