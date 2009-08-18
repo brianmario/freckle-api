@@ -4,4 +4,5 @@ A basic API client for the Freckle API
 
 == Dependencies
 
+* Streamly - http://github.com/brianmario/streamly
 * yajl-ruby - http://github.com/brianmario/yajl-ruby

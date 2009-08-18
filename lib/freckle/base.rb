@@ -1,9 +1,9 @@
 module Apis
   module Freckle
     class Base
-      def initialize(*args)
+      def initialize(args)
         if args.is_a?(Hash)
-          @site_url = args[:site_url]
+          @site_url = args[:username]
           @token = args[:token]
         elsif args.is_a?(Array)
           @site_url = args[0]
@@ -31,8 +31,7 @@ module Apis
       end
       
       def get(url)
-        uri = URI.parse('http://'+@site_url+'/api'+url+'?token='+@token)
-        return Yajl::HttpStream.get(uri)
+        return Yajl::Parser.parse(Streamly.get('http://'+@site_url+'/api'+url+'?token='+@token))
       end
       
       protected

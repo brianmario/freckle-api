@@ -1,5 +1,5 @@
 require 'yajl' unless defined?(Yajl)
-require 'uri' unless defined?(URI)
+require 'streamly' unless defined?(Streamly)
 
 module Apis
   module Freckle
